@@ -1,0 +1,10 @@
+How to Login to dgx.sdsu.edu:
+    1- Open Terminal Command
+    2- Enter: ssh atamim@dgx.sdsu.edu
+    3- It will show something like this
+        The authenticity of host 'dgx.sdsu.edu (130.191.49.91)' can't be established.
+        ED25519 key fingerprint is SHA256:ixIl5F43rL17kwOv1gO5kL2wvWs/V3pq/0wFvQ5WBLE.
+        This key is not known by any other names
+        Are you sure you want to continue connecting (yes/no/[fingerprint])?
+        --> Enter "yes"
+    4- Enter your password (Copy/Paste (Don't type it))

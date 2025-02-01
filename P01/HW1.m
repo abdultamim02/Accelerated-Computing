@@ -1,5 +1,5 @@
-threads = [1, 2, 4, 8, 16, 32, 64, 128]; % Powers of 2
-time = [7.295530, 4.491734, 1.587605, 0.875662, 0.818440, 0.331504, 0.381048, 0.107883];
+threads = [1, 2, 4, 8, 16, 32, 64, 128, 256]; % Powers of 2
+time = [4.697196, 2.387700, 1.541056, 0.608784, 0.387454, 0.203777, 0.150876, 0.112527, 0.148393];
 
 % Plot settings
 figure;
@@ -10,5 +10,5 @@ title('DGEMM Parallel Performance');
 grid on;
 
 % Customize axis ticks to match power-of-2 spacing
-set(gca, 'xtick', 2.^(0:7));
-set(gca, 'xticklabels', {'2^0', '2^1', '2^2', '2^3', '2^4', '2^5', '2^6', '2^7'});
+set(gca, 'xtick', 2.^(0:8));
+set(gca, 'xticklabels', {'2^0', '2^1', '2^2', '2^3', '2^4', '2^5', '2^6', '2^7', '2^8'});

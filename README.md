@@ -1,4 +1,4 @@
-**COMPE596 Documentation**
+**Accelerated Computing Documentation**
 ============================
 
 ## Creating an Account

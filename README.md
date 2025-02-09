@@ -8,7 +8,7 @@
 -For *MAC* Users:
 
 - Open the Terminal App
-- Enter the Following, then Press `Enter`:
+- Run the following, then Press `Enter`:
 
 ```bash
 ssh <YourUsername>@dgx.sdsu.edu
@@ -36,25 +36,30 @@ Welcome to NVIDIA DGX Server Version #.#.# (GNU/Linux #.#.#-###-generic x##_##)
 
 ## Viewing/Switching Between Folders and Files
 
-* To See Your Folders/Files, Enter the Following:
+* To See Your Folders/Files, Run the Following:
   ```
   ls
   ```
 
-* To Enter into a Specific Folder, Enter the Following:
+* To Enter into a Specific Folder, Run the Following:
   ```
   cd foldername/
   ```
+  
+* To Exit a Folder or Go Back to the Previous Folder, Run the Following:
+```
+cd ..
+```
 
 ## Creating/Accessing New/Existing Folders and Files
 
-* To Create a New Folder, Enter the Following:
+* To Create a New Folder, Run the Following:
 
 ```
 mkdir foldername
 ```
 
-* To Create/Access a C (.c) File, Enter the Following:
+* To Create/Access a C (.c) File, Run the Following:
 ```
 emacs -nw filename.c
 ```
@@ -67,7 +72,7 @@ emacs -nw filename.c
 Ctrl+Z
 ```
 
-* To Go Back to the (.c) File, Enter the Following:
+* To Go Back to the (.c) File, Run the Following:
 
 ```
 fg

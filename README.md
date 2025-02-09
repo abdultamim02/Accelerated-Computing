@@ -11,13 +11,13 @@
 - Run the following, then Press `Enter`:
 
 ```bash
-ssh <YourUsername>@dgx.sdsu.edu
+ssh YourUsername@dgx.sdsu.edu
 ```
 
 - Then, It Will Require You to Enter Your Password
   
 ```
-<YourUsername>@dgx.sdsu.edu's password:
+YourUsername@dgx.sdsu.edu's password:
 ```
 
 *NOTE*: DON'T ENTER YOUR PASSWORD MANUALLY, COPY AND PASTE IT INTO YOUR TERMINAL
@@ -82,4 +82,11 @@ fg
 ```
 Ctrl+X
 Ctrl+S
+```
+
+## Removing/Deleting Existing Folders and Files
+
+* To Delete an Existing File, Run the following:
+```
+rm filename
 ```

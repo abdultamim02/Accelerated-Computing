@@ -46,7 +46,7 @@ Welcome to NVIDIA DGX Server Version #.#.# (GNU/Linux #.#.#-###-generic x##_##)
   cd foldername/
   ```
 
-## Creating New Folders and Files
+## Creating/Accessing New/Existing Folders and Files
 
 * To Create a New Folder, Enter the Following:
 
@@ -54,14 +54,14 @@ Welcome to NVIDIA DGX Server Version #.#.# (GNU/Linux #.#.#-###-generic x##_##)
 mkdir foldername
 ```
 
-* To Create a C (.c) File, Enter the Following:
+* To Create/Access a C (.c) File, Enter the Following:
 ```
 emacs -nw filename.c
 ```
 
 *NOTE*: When You Press `Enter`, It Will Take You Directly To the File.
 
-* To Exit the File and Go Back to the Main Terminal, Press the Following:
+* To Exit the File and Go Back to the Main Terminal, Press the following:
 
 ```
 Ctrl+Z
@@ -73,7 +73,7 @@ Ctrl+Z
 fg
 ```
 
-* To Save the File After Writing Some Code, Press the Following:
+* To Save the File After Writing Some Code, Press the following:
 ```
 Ctrl+X
 Ctrl+S

@@ -90,3 +90,8 @@ Ctrl+S
 ```
 rm filename
 ```
+
+* To Remove a File's Content, Run the following:
+```
+> filename
+```

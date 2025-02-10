@@ -16,10 +16,16 @@ int main(int argc, char *argv[])
     srand(time(0));
 
     Node *head = NULL;
-    Node *p, *prev = NULL; // working pointers                                                                                                                                                                                                                                                                                                                      \
-\                                                                                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                                                                                    \
-                                                                                                                                                                                                                                                                                                                                                                     
+    Node *p, *prev = NULL; // working pointers                                                                                                                                                                                                                                                                                                                       
+
+    int N;        // Number of Nodes to Insert                                                                                                                                                                                                                                                                                                                       
+    if (argc < 2) {
+        printf("Usage: %s <num_nodes>\n", argv[0]);
+        return 1;
+    }
+
+    sscanf(argv[1], "%d", &N);                                                                                                                                                                                                                                                                                                                                      \
+
     int value;
     int k;
     Node *newNode;
@@ -34,7 +40,7 @@ int main(int argc, char *argv[])
     head->prev = NULL;                                                                                                                                                                                                                                                                                                               \
                                                                                                                                                                                                                                                                                                                                                                     \
 
-    for(k = 1; k <= 262144; k++){
+    for(k = 1; k <= N; k++){
         p = head->next;
         prev = head;
         value = rand() % 1000 + 1;
@@ -75,7 +81,7 @@ int main(int argc, char *argv[])
 
     run_time = omp_get_wtime() - start_time;
 
-    printf("Time Taken to Insert %d Nodes Using 1 Thread: %f Seconds\n\n-", count - 1, run_time);
+    printf("Time Taken to Insert %d Nodes Using 1 Thread (Serial): %f Seconds\n\n-", count - 1, run_time);
 
     printf("\n");
 

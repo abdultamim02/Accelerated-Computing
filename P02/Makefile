@@ -5,7 +5,7 @@ all: HW2_ser HW2_omp
 #--------------------------------------------------------------------                                                                                                                                                                         
 # Makefile for HW2_ser.c                                                                                                                                                                                                                      
 HW2_ser: HW2_ser.c
-        gcc -fopenmp HW2_ser.c -o HW2_ser
+        gcc -fopenmp HW2_ser.c -o HW2_ser -lm
 runSer: HW2_ser
         (unset OMP_NUM_THREADS; export OMP_NUM_THREADS=1; ./HW2_ser)
 
@@ -33,3 +33,15 @@ runOmp256: HW2_omp
         unset OMP_NUM_THREADS
         export OMP_NUM_THREADS=256
         ./HW2_omp 256
+
+#--------------------------------------------------------------------     
+# Single Commands to Run HW2_omp.c with different numbers of threads and Nodes                                                                                                                                                                    
+#       gcc -fopenmp HW2_omp.c -o HW2_omp -lm
+#        unset OMP_NUM_THREADS
+#        export OMP_NUM_THREADS=32
+#        ./HW2_omp 32 1
+
+#--------------------------------------------------------------------     
+# Single Commands to Run HW2_ser.c with different numbers of Nodes 
+#        gcc -fopenmp HW2_ser.c -o HW2_ser -lm
+#        (unset OMP_NUM_THREADS; export OMP_NUM_THREADS=1; ./HW2_ser 1)

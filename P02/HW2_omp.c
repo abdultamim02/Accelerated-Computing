@@ -16,9 +16,14 @@ int main(int argc, char *argv[])
     int N;                 // Number of Nodes to Insert                                                                                                                                                                                                                                                                                                                                                                                                                                     
     unsigned int n = 0;    // Number of Threads                                                                                                                                                                                                                                                                                                                                                                                                                                             
 
-    N = pow(2, 18);
+    if (argc < 3) {
+        printf("Usage: %s <num_threads> <num_nodes>\n", argv[0]);
+        return 1;
+    }
 
     sscanf(argv[1],"%d", &n);
+    sscanf(argv[2], "%d", &N);
+
 
     omp_set_dynamic(0);
     omp_set_num_threads(n);

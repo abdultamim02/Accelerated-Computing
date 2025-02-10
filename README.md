@@ -95,3 +95,13 @@ rm filename
 ```
 > filename
 ```
+
+* To Remove Some Parts of the File's Content, Go Inside the File and Press the following:
+```
+Ctrl+W
+```
+
+* To Delete a Single Line of Code. Press the following:
+```
+Ctrl+K
+```

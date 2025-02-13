@@ -13,8 +13,10 @@ typedef struct node {
 int main(int argc, char *argv[])
 {
     double start_time, run_time;
-    int N;                 // Number of Nodes to Insert                                                                                                                                                                                                                                                                                                                                                                                                                                     
-    unsigned int n = 0;    // Number of Threads                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    int N;                 // Number of Nodes to Insert                                                                                                                                                                                                                                                                                                                                                                                                                                    \
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    unsigned int n = 0;    // Number of Threads                                                                                                                                                                                                                                                                                                                                                                                                                                            \
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
     if (argc < 3) {
         printf("Usage: %s <num_threads> <num_nodes>\n", argv[0]);
@@ -31,15 +33,19 @@ int main(int argc, char *argv[])
     srand(time(0));
 
     Node *head = NULL;
-    Node *p, *prev = NULL; // working pointers                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    Node *p, *prev = NULL; // working pointers                                                                                                                                                                                                                                                                                                                                                                                                                                             \
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
     int value;
     int k;
     Node *newNode;
 
+    int iterations;
+
     start_time = omp_get_wtime();
 
-    // Create First Node                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    // Create First Node                                                                                                                                                                                                                                                                                                                                                                                                                                                                   \
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
     head = (Node *)calloc(1,sizeof(Node));
     head->value = 0;
     head->next = NULL;
@@ -47,8 +53,10 @@ int main(int argc, char *argv[])
     omp_init_lock(&head->lock);
 
     omp_lock_t lock;
-    omp_init_lock(&lock); // Initialize the lock                                                                                                                                                                                                                                                                                                                    \                                                                                                                       
+    omp_init_lock(&lock); // Initialize the lock                                                                                                                                                                                                                                                                                                                    \                                                                                                                      \
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           \
+
     omp_set_dynamic(0);
     omp_set_num_threads(n);
 
@@ -78,7 +86,8 @@ int main(int argc, char *argv[])
         newNode->value = value;
         newNode->next = p;
         newNode->prev = prev;
-        prev->next = newNode; // Fix null pointer issue                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        prev->next = newNode; // Fix null pointer issue                                                                                                                                                                                                                                                                                                                                                                                                                                    \
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
         fprintf(stderr,"\tthread %d updates newNode->prev->next (%p) to (%p)\n", omp_get_thread_num(), newNode->prev->next, newNode);
         if (p) {
@@ -88,9 +97,13 @@ int main(int argc, char *argv[])
 
         omp_unset_lock(&lock);
         printf("k: %d\n\n", k);
+        iterations = k;
     }
 
     omp_destroy_lock(&lock); // Destroy the lock                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+    run_time = omp_get_wtime() - start_time;
+
     int count = 0;
     p = head;
     while (p != NULL) {
@@ -101,9 +114,12 @@ int main(int argc, char *argv[])
 
     printf("\n");
 
-    run_time = omp_get_wtime() - start_time;
+
 
     printf("Time Taken to Insert %d Nodes Using %d Threads: %f Seconds\n\n-", count - 1, n, run_time);
+
+    printf("\n\nInserting %d nodes\n", N);
+    printf("Time: %f seconds, count: %d, %d threads, %d iterations\n\n", run_time, count, n, iterations);
 
     return 0;
 }

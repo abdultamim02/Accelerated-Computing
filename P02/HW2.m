@@ -33,6 +33,3 @@ grid on;
 % Customize axis ticks to match power-of-2 spacing
 set(gca, 'XTick', 2.^(0:18)); % Set X-ticks to powers of 2 from 2^0 to 2^18
 set(gca, 'XTickLabel', {'2^0', '2^1', '2^2', '2^3', '2^4', '2^5', '2^6', '2^7', '2^8', '2^9', '2^10', '2^11', '2^12', '2^13', '2^14', '2^15', '2^16', '2^17', '2^18'}); % Set X-tick labels
-
-% Uncommend the line below for better visualization 
-set(gca, 'XScale', 'log'); % Set X-axis scale to logarithmic if needed for better visualization

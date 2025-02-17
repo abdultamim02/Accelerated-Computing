@@ -11,7 +11,7 @@
 emacs -nw HW2_omp.c
 ```
 
-- Compiles the `HW2_ser.c` file using `GCC` with OpenMP support and generates an executable named `HW2_ser`
+- Compiles the `HW2_omp.c` file using `GCC` with OpenMP support and generates an executable named `HW2_omp`
 
 ```
 gcc -fopenmp HW2_omp.c -o HW2_omp -lm
@@ -27,5 +27,5 @@ export OMP_NUM_THREADS=#
 - Run and Execute the Program
 
 ```
-./HW2_omp #(Number of Threads) #(Number of Nodes)
+./HW2_omp (# Number of Threads) (# Number of Nodes)
 ```

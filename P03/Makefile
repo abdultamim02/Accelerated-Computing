@@ -56,6 +56,3 @@ run128: Simpson
         (unset OMP_NUM_THREADS; export OMP_NUM_THREADS=128; ./Simpson 128 1e6)
 run256: Simpson
         (unset OMP_NUM_THREADS; export OMP_NUM_THREADS=256; ./Simpson 256 1e6)
-
-g++ -fopenmp Simpson.cpp -o Simpson
-(unset OMP_NUM_THREADS; export OMP_NUM_THREADS=16; ./Simpson 16 1e6)

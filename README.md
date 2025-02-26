@@ -105,3 +105,10 @@ Ctrl+W
 ```
 Ctrl+K
 ```
+
+## Finding Files 
+
+* To Find a Certain File, Run the Following:
+```
+find ~ -name "filename.file_extension" 2>/dev/null
+```

@@ -76,3 +76,4 @@ runReduction1: gpu_parallel_reduction
 	./gpu_parallel_reduction 524288
 	./gpu_parallel_reduction 1048576
 	./gpu_parallel_reduction 1073741824
+	

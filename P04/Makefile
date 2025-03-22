@@ -38,3 +38,4 @@ jacobi_omp_gpu: jacobi_omp_gpu.c
 
 jacobi_omp_gpu_simd: jacobi_omp_gpu_simd.c
         $(CC) $(CFLAGS) $(LIBS) $< -o ${@}.exe
+        

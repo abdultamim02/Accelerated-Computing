@@ -1,5 +1,5 @@
 threads = [1, 2, 4, 8, 16, 32, 64, 128, 256]; % Powers of 2
-time = [0.237467, 0.143676, 0.0777716, 0.0702072, 0.0951428, 0.110896, 0.146824, 0.216615, 0.350486];
+time = [0.0696441, 0.0631901, 0.0323925, 0.033294, 0.0206279, 0.0216191, 0.0218429, 0.0490641, 0.0943903];
 
 % Plot settings
 figure;
@@ -16,3 +16,6 @@ set(gca, 'XScale', 'log');
 
 % Legend
 legend('Elapsed Time vs. Threads Count', 'Location', 'northwest');
+
+% Save Plot
+saveas(gcf,'TimevsThreads.png');

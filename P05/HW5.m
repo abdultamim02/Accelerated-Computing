@@ -11,7 +11,7 @@ hold off;
 
 % Formatting
 xlabel('Number of Summations (N)');
-ylabel('Elapsed Time (s)');
+ylabel('Elapsed Time (ms)');
 title('CPU vs. GPU Performance');
 grid on;
 

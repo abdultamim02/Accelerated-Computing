@@ -3,5 +3,5 @@ P04/Matlab Data and Plots/T1000.m
 P04/Matlab Data and Plots/T10000.m
 P04/Matlab Data and Plots/T100000.m
 P04/Matlab Data and Plots/T1000000.m
-P07/peppers.dat
-P07/peppers.out
+*.dat
+*.out

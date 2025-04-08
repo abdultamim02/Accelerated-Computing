@@ -15,5 +15,5 @@ all: linear_systems
 hilbert_lineral_systems: hilbert_lineral_systems.cpp
 	nvcc -c -I/usr/local/cuda/include hilbert_lineral_systems.cpp
 	g++ -o hilbert_lineral_systems hilbert_lineral_systems.o -L/usr/local/cuda/lib64 -lcusolver -lcudart
-run: hilbert_lineral_systems
+run1: hilbert_lineral_systems
 	./hilbert_lineral_systems
